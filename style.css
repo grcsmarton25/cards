@@ -3,8 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+img{
+    width: 100%;
+}
+body{
+    background-color: rgb(2, 27, 70);
+}
 .container{
-    background-color: gray;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,6 +17,15 @@
 }
 .card{
     padding: 1rem;
+    background-image: linear-gradient(rgb(100,100,100), rgb(300,300,300));
+    box-shadow: 0 0 10px 1px #000;
+    transition: scale 0.3s;
+}
+.card:hover{
+    scale: 1.09;
+}
+.card a:active{
+    box-shadow: 2px 2px 10px 1px #000;
 }
 .card p{
     text-align: justify;
