@@ -5,15 +5,29 @@
 }
 img{
     width: 100%;
+    animation-name: rotatePic;
+    animation-duration: 3s;
+    cursor: pointer;
+}
+@keyframes rotatePic{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(60deg);}
+    50%{transform: rotate(180deg);}
+    75%{transform: rotate(240deg);}
+    100%{transform: rotate(360deg);}
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 body{
     background-color: rgb(2, 27, 70);
 }
 .container{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    margin-top: 10rem;
 }
 .card{
     padding: 1rem;
@@ -31,7 +45,7 @@ body{
     text-align: justify;
 }
 .card h3{
-    text-transform: ;
+    font-variant: small-caps;
 }
 .card p::first-letter{
     font-weight: bold;
@@ -51,3 +65,8 @@ body{
     font-weight: bold;
 }
 
+@media (max-width:767px){
+    .container{
+        margin-top: 0;
+    }
+}
